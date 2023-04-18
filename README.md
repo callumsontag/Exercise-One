@@ -1,3 +1,3 @@
 # Exercise-One
 
-Function to read and filter csv data
+Functions to read and filter csv data
