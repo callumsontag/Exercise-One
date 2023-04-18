@@ -1,0 +1,16 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dataRead.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node dataRead.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.3.6",
+    "prompt-sync": "^4.2.0"
+  }
+}
