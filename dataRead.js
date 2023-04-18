@@ -19,13 +19,13 @@ const normaliseData = (csvData) => {
     return result
 }
 
-const peopleInTwenties = (people) => people.filter((person) =>  person.age > 19 && person.age < 30)
+const getPeopleInTwenties = (people) => people.filter((person) =>  person.age > 19 && person.age < 30)
 
-const oldestPerson = (people) => people.reduce((oldest, current) => current.age > oldest.age ? current : oldest, { age: -Infinity });
+const getOldestPerson = (people) => people.reduce((oldest, current) => current.age > oldest.age ? current : oldest, { age: -Infinity });
 
-const singlePeople = (people) => people.filter((person) => person.maritalStatus === 'Single')
+const getSinglePeople = (people) => people.filter((person) => person.maritalStatus === 'Single')
 
-const marriedPeople = (people) => people.filter((person) => person.maritalStatus === 'Married')
+const getMarriedPeople = (people) => people.filter((person) => person.maritalStatus === 'Married')
 
 const data = readData('./data.csv')
 
@@ -35,13 +35,15 @@ const males = people.filter((person) => person.gender === 'Male')
 
 const females = people.filter((person) => person.gender === 'Female')
 
-const marriedHumans = marriedPeople(people)
+const marriedPeople = getMarriedPeople(people)
 
-const twenties = peopleInTwenties(people)
+const peopleInTwenties = getPeopleInTwenties(people)
 
-const singleMales = singlePeople(males)
+const singleMales = getSinglePeople(males)
 
-const singleFemales = singlePeople(females)
+const singleFemales = getSinglePeople(females)
+
+const oldestPerson = getOldestPerson(people)
 
 
 
